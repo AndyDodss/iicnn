@@ -97,8 +97,8 @@ def reconstruct_image(features, net,
     # img bounds
     img_min = -img_mean
     img_max = img_min + 255.
-    img_bounds = [(img_min[0], img_max[0])]*(num_of_pix/3) + [(img_min[1],
-                                                               img_max[1])]*(num_of_pix/3) + [(img_min[2], img_max[2])]*(num_of_pix/3)
+    img_bounds = [(img_min[0], img_max[0])]*int((num_of_pix/3)) + [(img_min[1],
+                                                               img_max[1])]*int((num_of_pix/3)) + [(img_min[2], img_max[2])]*int((num_of_pix/3))
 
     # initial image
     if initial_image is None:
