@@ -149,7 +149,7 @@ def sort_layer_list(net, layer_list):
     layer_index_list = []
     for layer in layer_list:
         # net.blobs is collections.OrderedDict
-        for layer_index, layer0 in enumerate(net.blobs.keys):
+        for layer_index, layer0 in enumerate(net.blobs.keys()):
             if layer0 == layer:
                 layer_index_list.append(layer_index)
                 break
