@@ -152,14 +152,24 @@ def sort_layer_list(net, layer_list):
     print(net.blobs.items())
     '''sort layers in the list as the order in the net'''
     layer_index_list = []
+    print('layer_list')
+    print(layer_list)
+    print('_____________________')
+   
     for layer in layer_list:
         # net.blobs is collections.OrderedDict
         for layer_index, layer0 in enumerate(list(net.blobs.keys())):
+            print(layer0) 
+            print(layer_index)
             if layer0 == layer:
                 layer_index_list.append(layer_index)
                 break
     layer_index_list_sorted = sorted(layer_index_list)
     layer_list_sorted = []
+    print('layer_index_list')
+    print(layer_index_list)
+    print('layer_index_list-sorted')
+    print(layer_index_list_sorted)
     for layer_index in layer_index_list_sorted:
         list_index = layer_index_list.index(layer_index)
         layer = layer_list[list_index]
