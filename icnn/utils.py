@@ -146,7 +146,7 @@ def clip_small_contribution_pixel(img, grad, pct=1):
 
 def sort_layer_list(net, layer_list):
     print(net)
-    print("-----------------------")
+    print("-----------------------kkkk")
     print(net.blobs.keys())
     print(net.blobs.items())
     '''sort layers in the list as the order in the net'''
