@@ -145,7 +145,10 @@ def clip_small_contribution_pixel(img, grad, pct=1):
 
 
 def sort_layer_list(net, layer_list):
+    print(type(layer_list))
     layer_list = list(layer_list)
+    print(type(layer_list))
+    print(layer_list)
     print(net)
     print("-----------------------kkkk")
     print(net.blobs.keys())
