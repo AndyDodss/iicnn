@@ -171,7 +171,7 @@ def sort_layer_list(net, layer_list):
     print('layer_index_list-sorted')
     print(layer_index_list_sorted)
     for layer_index in layer_index_list_sorted:
-        list_index = layer_index_list.index(layer_index)
+        list_index = layer_index_list[layer_index]
         layer = layer_list[list_index]
         layer_list_sorted.append(layer)
     return layer_list_sorted
