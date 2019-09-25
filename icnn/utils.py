@@ -148,12 +148,13 @@ def sort_layer_list(net, layer_list):
     print(net)
     print("-----------------------kkkk")
     print(net.blobs.keys())
+    print(list(net.blobs.keys()))
     print(net.blobs.items())
     '''sort layers in the list as the order in the net'''
     layer_index_list = []
     for layer in layer_list:
         # net.blobs is collections.OrderedDict
-        for layer_index, layer0 in list(enumerate(net.blobs.keys ())):
+        for layer_index, layer0 in enumerate(list(net.blobs.keys())):
             if layer0 == layer:
                 layer_index_list.append(layer_index)
                 break
