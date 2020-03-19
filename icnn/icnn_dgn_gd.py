@@ -190,7 +190,14 @@ def reconstruct_image(features, net, net_gen,
 
         # generated image
         img0 = net_gen.blobs[output_layer_gen].data[0].copy()
-
+         
+        print(img0.shape,img0)
+        print()
+        print('top_left',top_left[0])
+        print('top_left_type',type(top_left[0]))
+        print('top_right',top_right[0])
+        print('img_size_1',img_size[1])
+        print('img_size_2',img_size[2])
         # crop image
         img = img0[:, top_left[0]:top_left[0]+img_size[1],
                    top_left[1]:top_left[1]+img_size[2]].copy()
